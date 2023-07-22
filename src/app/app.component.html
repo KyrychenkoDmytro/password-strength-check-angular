@@ -1,0 +1,19 @@
+<section>
+     <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [errorStateMatcher]="passwordErrorStateMatcher" [formControl]="passwordControl">
+     </mat-form-field>
+
+     <div class="wrapper-section">
+          <div [class.yellow]="passwordControl.hasError(PASSWORD_ERROR_MAP.YELLOW_YELLOW_GREY)"
+               [class.green]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_GREEN)" [class.red]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_RED)
+       || passwordControl.hasError(PASSWORD_ERROR_MAP.RED_GREY_GREY)"></div>
+
+          <div [class.yellow]="passwordControl.hasError(PASSWORD_ERROR_MAP.YELLOW_YELLOW_GREY)"
+               [class.green]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_GREEN)"
+               [class.red]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_RED)"></div>
+
+          <div [class.green]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_GREEN)"
+               [class.red]="passwordControl.hasError(PASSWORD_ERROR_MAP.ALL_RED)"></div>
+     </div>
+</section>
